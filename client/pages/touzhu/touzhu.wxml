@@ -1,0 +1,155 @@
+<!--touzhu.wxml-->
+<view class="lotteryBox">
+  <view class="buttons">
+   <button  id="moreBalls" class="chooseball" bindtap="moreBalls" data-lotteryType="{{lotteryType}}">+继续选号</button>
+    <button id="jixuanOne" class="chooseball" data-data="1" bindtap="randomNumber" data-lotteryType="{{lotteryType}}">+机选1注</button> 
+    <button class="chooseball" id="hemai"  bindtap="changeMethod" data-lotteryType="{{lotteryType}}">+{{methodText}}</button>
+  </view>
+ <view class="selectBalls clearfix {{shopMethod?'selectHemai':''}}">
+ <block wx:for="{{ballsList}}" wx:for-item="item" wx:for-index="index">
+ <view class="selectBox" >
+   <view class="clearNumber" catchtap="clearballs" data-id="{{index}}">×</view>
+   <view class="middleNumber">
+     <view class="top">
+      <block wx:if="{{lotteryType!='qixingcai'}}">
+      <block wx:for="{{item.redballs}}" wx:for-item="item1"><text class="ballNumber chooseRed">{{item1}}</text></block>
+      <block wx:for="{{item.blueballs}}" wx:for-item="item1"><text class="ballNumber chooseBlue">{{item1}}</text></block>
+      </block>
+      <block wx:else>
+      <block wx:for="{{item.balls}}" wx:for-item="item1">
+      <block wx:for="{{item1}}" wx:for-item="item2">
+      <text>{{item2}}</text>
+      </block>
+      <text>,</text>
+      </block>
+      </block>
+     </view>
+     <view class="bottomNote">{{item.totalZhushu}}注<block wx:if="{{zhuijia}}">{{item.totalMoney+item.totalZhushu}}</block><block wx:else>{{item.totalMoney}}</block>元</view>
+   </view>
+  <view class="arrow" bindtap="changeballs" data-id="{{index}}" data-lotteryType="{{lotteryType}}">> </view>
+  </view>
+  </block>
+   </view>
+  <block wx:if="{{shopMethod==false}}">
+  <view class="lotteryType">
+  <text  class="type">总注数：</text><text class="value">{{totalZhushu}}注</text>
+  </view>
+   <view class="lotteryType">
+  <text  class="type">总金额：</text><text class="value">{{totalMoney}}元</text><text class="small">(每份最少为1元)</text>
+  </view> 
+ <view class="lotteryType" id="changeFenshu">
+  <view class="baodi">
+  <text class="note">投</text>
+  <text class="icon" id="subMul" data-data="multiple" bindtap="sub">-</text>
+  <input class="number" id="multiple" value="{{multiple}}" type="number" data-data="multiple" bindinput="changeinput" bindblur="inputblur"/>
+  <text class="icon" id="addMul" data-data="multiple" bindtap="add">+</text>
+  <text class="note">倍</text>
+  <text class="small eachMoney" wx:if="{{warningMultiple}}"> {{multipleText}}!</text>
+  </view>
+  <view class="baodi">
+  <text class="note">分</text>
+  <text class="icon" id="subCopy" data-data="copyNumber" bindtap="sub">-</text>
+  <input class="number" id="copyNumber" value="{{copyNumber}}" type="number" data-data="copyNumber" bindinput="changeinput" bindblur="inputblur"/>
+  <text class="icon" id="addCopy" data-data="copyNumber" bindtap="add">+</text>
+  <text class="note">份</text> 
+   <!-- <text class="note">(最少金额的投注号码的每份{{eachMoney}}元)</text>  -->
+  <text class="small eachMoney" wx:if="{{warningcopyNumber}}"> {{copyNumberText}}!</text>
+  </view>
+ </view>
+  <view class="lotteryType">
+  <text class="type">保底方式</text>
+  <!-- <text class="small eachMoney">(两种方式任选一种)</text> -->
+ </view>
+ <view class="lotteryType" id="changeBaodi">
+   <view class="baodi">
+  <text class="note">份数</text>
+  <text class="icon" id="subCopy" data-data="baodiCopies" bindtap="sub">-</text>
+  <input class="number" id="baodiCopies" value="{{baodiCopies}}" type="number" data-data="baodiCopies" bindinput="changeinput" bindblur="inputblur" />
+  <text class="icon" id="addCopy" data-data="baodiCopies" bindtap="add">+</text>
+  <text class="note">份</text>
+  <text class="small eachMoney" wx:if="{{warningbaodiCopies}}"> {{baodiCopiesText}}!</text>
+  </view>
+ </view>
+  <view class="lotteryType" id="shop">
+  <view class="lotteryShop"><text class="type">出彩店铺:</text></view>
+  <view class="chooseShop" bindtap="powerDrawer" data-statu="open">{{shopValue}}</view>
+ </view> 
+</block>
+<!--自定义模态窗口  -->
+<!--mask-->
+<view class="drawer_screen"  data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content-->
+<view  class="drawer_box" wx:if="{{showModalStatus}}"> 
+ <!--drawer content-->
+ <view class="drawer_title">请选投注站进行出票</view> 
+ <view class="note"> 
+   <text>(为了保障您的订单成功出票，系统将自动为您的订单分配给空闲投注站，且本投注站在正常情况下有出票能力；由于出票时间较短，特殊情况下还是会有撤单，望您谅解)</text>
+ </view>
+ <view class="drawer_content">  
+ <radio-group bindchange="radiochange">
+  <block wx:for="{{caipiaozhan}}">
+  <view class="list"><radio value="{{item.name}}" checked="{{false}}" />{{item.name}}</view>
+  </block>
+  <view class="list"><radio value=" 安易彩票站" checked="{{false}}" /> 安易彩票站</view>
+  <view class="list"><radio value=" 乐彩彩票站" checked="{{false}}" /> 乐彩彩票站</view>
+  <view class="list"><radio value="天天大奖彩票站" checked="{{false}}" />天天大奖彩票站</view>
+  <view class="list"><radio value=" 福临门彩站" checked="{{false}}" /> 福临门彩站</view>
+  <view class="list"><radio value=" 好运气福彩站" checked="{{false}}" />好运气福彩站</view>
+  <view class="list"><radio value=" 彩智赢彩票旗舰店" checked="{{false}}" />彩智赢彩票旗舰店</view>
+  <view class="list"><radio value=" 出彩彩票站" checked="{{false}}" /> 出彩彩票站</view>
+  <view class="list"><radio value=" 彩智赢竞彩旗舰店" checked="{{false}}" /> 彩智赢竞彩旗舰店</view>
+ </radio-group>
+ <view class="btn_ok" bindtap="powerDrawer" data-statu="close"><button>确定</button></view> 
+</view>
+</view>
+<!--自定义弹出窗口-->
+<!--mask-->  
+<view class="toast_mask" wx:if="{{toastText!=''}}"></view>  
+<!--以下为toast显示的内容-->  
+<view class="toast_box" wx:if="{{toastText!=''}}">  
+  <view class="toast_content">  
+      {{toastText}}  
+    </view>   
+</view>
+<!--自己买  -->
+ <block wx:if="{{shopMethod==true}}">
+ <view class="mine">
+   <view class="chooseShop" bindtap="powerDrawer" data-statu="open">{{shopValue}}</view>
+   <block wx:if="{{lotteryType=='daletou'}}">
+    <checkbox-group bindchange="checkboxChange" class="checkzhui">
+    <checkbox value='true' checked='{{zhuijia}}'>追加</checkbox>
+    </checkbox-group>
+</block>
+   <view class="baodi">
+  <text class="note">投</text>
+  <text class="icon" id="subMul" data-data="multiple" bindtap="sub">-</text>
+  <input class="number" id="multiple" value="{{multiple}}" type="number" data-data="multiple" bindinput="changeinput" bindblur="inputblur"/>
+  <text class="icon" id="addMul" data-data="multiple" bindtap="add">+</text>
+  <text class="note">倍</text>
+  </view>
+ </view>
+ <view class="bottom">
+  <view class="pay"><text>应支付金额:</text><text class="small eachMoney">{{totalMoney}}元</text></view>
+  <button class="submit" data-data="orderBy" bindtap="cat">提交订单</button>
+ </view>
+ </block>
+ <!--合买  -->
+ <block wx:elif="{{shopMethod==false}}">
+ <view class="bottom">
+  <view class="pay"><text>应支付金额:</text><text class="small eachMoney">{{baodiMoney}}元</text></view>
+  <button class="submit" data-data="hemai" bindtap="cat">提交订单</button>
+ </view>
+ </block>
+ <!--自定义模态窗口  -->
+ <view class="drawer_screen" data-statu="close" wx:if="{{IDCardStatus}}"></view> 
+ <view  class="ID_box" wx:if="{{IDCardStatus}}"> 
+ <view class="drawer_title">温馨提示</view> 
+   <view class="note"> 
+   <text>为了更好地保护您的购彩信息，请先完善您的个人资料</text>
+ </view>
+ <view class="IDbuttons">
+   <view class="give" bindtap="shop">直接购买</view><view class="confirm" bindtap="information">完善资料</view>
+ </view>
+ </view>
+
+</view>

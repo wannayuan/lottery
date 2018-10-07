@@ -1,0 +1,30 @@
+<!--pages/createShop/createShop.wxml-->
+<view class='shopContainer'>
+  <label class='shopLabel'>彩票站编号:</label>
+  <input type='text' placeholder='请输入彩票编号' class='shopInput' bindblur='information' data-data="bianhao"></input>
+  <label class='shopLabel'>彩票站名称:</label>
+  <input type='text' placeholder='请输入彩票站名称' class='shopInput' bindblur='information' data-data="name"></input>
+  <label class='shopLabel'>彩票站地址:</label>
+  <input type='text' placeholder='请输入彩票站地址' class='shopInput' bindblur='information' data-data="address"></input>
+  <label class='shopLabel'>身份证号码:</label>
+  <input type='text' placeholder='请输入身份证号' class='shopInput' type="number" bindblur='information' data-data="idcard"></input>
+  <label class='shopLabel'>电话号码:</label>
+  <input type='text' placeholder='请输入店主号码' class='shopInput' type="number" bindblur='information' data-data="phone"></input>
+  <label class='shopLabel shopImage'>上传图片</label>
+  <block wx:for="{{tempFilePaths}}">
+    <view class='loadPicture'>
+      <image src='{{item}}'></image>
+    </view>
+  </block>
+  <view class='loadPicture' bindtap='addPicture' wx:if="{{count<4}}">
+    <view class='rowPicture'></view>
+    <view class='colPicture'></view>
+  </view>  
+  <view class='confirm' bindtap='confirm'>提交</view>
+</view>
+<!--以下为toast显示的内容-->  
+<view class="toast_box" wx:if="{{toastText!=''}}">  
+  <view class="toast_content">  
+      {{toastText}}  
+    </view>   
+</view>

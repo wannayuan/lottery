@@ -1,0 +1,14 @@
+<!--pages/tixian/tixian.wxml-->
+<view class='Top'>
+  <text>可用余额:{{useMoney}}</text>
+</view>
+<view>
+ <input type='number' placeholder='提现金额不能超过可用余额' class="tixian" bindblur='inputMoney'></input>
+</view>
+<view class='tixianButton' bindtap='tixian'>提现</view><view wx:if="{{toastText!=''}}" class='toast_mask'>
+ <view wx:if="{{toastText!=''}}" class='tixianWarning'>
+  <view class='tip'>提示</view>
+  <view class='tixianText'>{{toastText}}</view>
+  <view class='sure' bindtap='sure'>确定</view>
+ </view>
+</view>

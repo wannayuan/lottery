@@ -1,0 +1,37 @@
+<!--pages/chongzhiMoney/chongzhiMoney.wxml-->
+<view>
+ <view class='chongzhiTitle'><text>充值金额</text></view>
+ <view class='chongzhiMoney'  >
+    <view class="moneyButton wx:if={{jine=='50'?'selected':''}}" data-money='50' bindtap="changeMoney">50元</view>
+    <view class="moneyButton wx:if={{jine=='100'?'selected':''}}" data-money='100' bindtap="changeMoney">100元</view>
+    <view class="moneyButton wx:if={{jine=='150'?'selected':''}}" data-money="150" bindtap="changeMoney">150元</view>
+    <view class="moneyButton wx:if={{jine=='200'?'selected':''}}" data-money="200" bindtap="changeMoney">200元</view>
+    <view class="moneyButton wx:if={{jine=='300'?'selected':''}}" data-money="300" bindtap="changeMoney">300元</view>
+    <view class="moneyButton wx:if={{jine==''?'selected':''}}" data-money="" bindtap='changeMoney'>其他</view>
+ </view>
+ <view>
+   <view class='zhifuButton' bindtap="zhifu">立即支付</view>
+ </view>
+ <!--自定义输入框-->
+ <view class='mask' wx:if="{{inputMoney=='true'}}">
+   <view wx:if="{{inputMoney=='true'}}" class='maskContent'>
+     <view class='maskTitle'>
+       <text class='tips'>提示</text>
+       <text>请输入自定义金额</text>
+     </view>
+     <view class='maskMoney'>
+       <input class="maskInput" placeholder='请输入自定义金额(300-1000元)' bindblur="blurMoney" type="number"></input>
+     </view>
+     <view class='maskButton'>
+      <view class='giveup' bindtap="giveup">取消</view>
+      <view class='confirm' bindtap="confirm">确定</view> 
+     </view>
+   </view>
+ </view>
+<!--以下为toast显示的内容-->  
+<view class="toast_box" wx:if="{{toastText!=''}}">  
+  <view class="toast_content">  
+      {{toastText}}  
+    </view>   
+</view>
+</view>

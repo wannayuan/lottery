@@ -1,0 +1,112 @@
+.chongzhiTitle{
+height:70rpx;
+line-height:70rpx;
+padding-left:20rpx;
+border-bottom:2rpx solid #eee;
+font-size:32rpx;
+}
+.chongzhiMoney{
+padding:20px;
+padding-right:0;
+padding-bottom:0;
+border-bottom:2rpx solid #eee;
+}
+.moneyButton{
+margin-right:20rpx;
+display:inline-block;
+width:30%;
+height:80rpx;
+line-height:80rpx;
+border-radius:10rpx;
+background-color:#999;
+color:#fff;
+text-align:center;
+margin-bottom:20rpx;
+}
+.zhifuButton{
+line-height:80rpx;
+text-align:center;
+margin:20rpx;
+width:710rpx;
+background-color:#cc3333;
+color:#fff;
+border-radius:10rpx;
+margin-top:50rpx;
+}
+.selected{
+  background-color:#cc3333;
+}
+.maskTitle{
+text-align:center;
+line-height:50rpx;
+}
+.tips{
+display:block;
+padding-top:10px;
+line-height:50rpx;
+font-size:30rpx;
+}
+.maskInput{
+border:2rpx solid #ddd;
+width:90%;
+margin:auto;
+padding-left:10rpx;
+border-radius:10rpx;
+margin-bottom:20rpx;
+}
+.maskButton{
+border-top:2rpx solid #ddd;
+height:80rpx;
+text-align:center;
+}
+.giveup,.confirm{
+width:300rpx;
+float:left;
+line-height:40px;
+height:80rpx;
+border-right:2rpx solid #ddd;
+}
+.confirm{
+  border:none;
+  width:298rpx;
+}
+.mask{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:500rpx;
+z-index:1000;
+overflow:hidden;
+}
+.maskContent{
+width:600rpx;
+margin:auto;
+border-radius:10rpx;
+background-color:#eee;
+z-index:999!important;
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:0%;
+z-index:1001;
+transform:translateX(-50%) translateY(30%);
+}
+.toast_box {  
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:25%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+}  
+.toast_content {  
+  padding:10rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+  line-height:40rpx;
+}  

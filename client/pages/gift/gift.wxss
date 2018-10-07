@@ -1,0 +1,37 @@
+/* pages/gift/gift.wxss */
+.prizeState{
+height:50rpx;
+border:2rpx solid #ddd;
+padding:25rpx 0rpx 25rpx 26rpx;
+}
+.choose{
+display:inline-block;
+background-color:#999999;
+height:50rpx;
+border-radius:15rpx;
+color:#fff;
+text-align:center;
+margin-right:12rpx;
+padding-left:17rpx;
+padding-right:17rpx;
+}
+.checked{
+  background-color: #cc3333;
+}
+.zhongContainer{
+height:70rpx;
+line-height:70rpx;
+border-bottom:2rpx solid #eee;
+background-color:#999;
+color:#fff;
+text-align: left;
+font-size:32rpx;
+}
+.zhongChild{
+float:left;
+width:40%;
+padding-left:60rpx;
+}
+.childText{
+ padding-right:25rpx;
+}

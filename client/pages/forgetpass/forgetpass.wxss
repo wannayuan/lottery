@@ -1,0 +1,49 @@
+/* pages/forgetpass/forgetpass.wxss */.container-hang {  
+    display: flex;  
+    flex-direction: row;  
+    background-color: #fff;   
+    border-bottom:1px solid;
+}  
+.container{
+  padding:0;
+  align-items: none;
+}
+button[type="primary"]{
+color:#FFFFFF;
+background-color:#cc3333;
+}
+.information{
+height:100rpx;
+border-bottom:2rpx solid #d8d8d8;
+line-height:100rpx;
+}
+.note{
+font-size:30rpx;
+width:150rpx;
+display:inline-block;
+text-align:center;
+}
+.value{
+display:inline-block;
+height:80rpx;
+width:200px;
+line-height:100rpx;
+font-size:26rpx;
+overflow:inherit;
+padding-left:20rpx;
+}
+.warningText{
+  display: block;
+  color: red;
+  font-size: 26rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top:10rpx;
+}
+.information_Box{
+  margin-top:20rpx;
+  border-top:2rpx solid #d8d8d8;
+}
+.registerBox{
+  height: 886rpx;
+}

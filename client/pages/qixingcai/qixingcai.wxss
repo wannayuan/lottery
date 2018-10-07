@@ -1,0 +1,124 @@
+/* pages/qixingcai/qixingcai.wxss */
+/* shuangseqiu.wxss */
+.ball{
+float:left;
+width:107rpx;
+height:107rpx;
+text-align:center;
+line-height:107rpx;
+font-size:45rpx;
+position:relative;
+font-family:"Microsoft YaHei UI";
+}
+.ball-radius{
+width:80rpx;
+height:80rpx;
+position:absolute;
+top:13rpx;
+left:13rpx;
+line-height:80rpx;
+border-radius:40rpx;
+border:2rpx solid #ddd;
+font-weight:bold;
+}
+.redBall{
+height:250rpx;
+border-bottom:none;
+margin-bottom:20rpx;
+padding-bottom:20rpx;
+}
+.redBall .ball{
+  color:#cc3333;
+}
+.redBall .ball-radius{
+    background-color:#fff;
+}
+.redBall .selected1{
+  background-color:#cc3333;
+  color:#fff;
+}
+.normal{
+  background-color:#fff;
+}
+.chooseRed,.chooseBlue{
+  height:60rpx;
+  padding-top:20rpx;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+.chooseRed{
+  color:red;
+}
+.chooseBlue{
+  color:blue;
+}
+.chooseRed text{
+  font-size: 36rpx;
+  font-family:"Microsoft YaHei UI";
+}
+.clearfix{
+  clear:both;
+}
+.buttons{
+  position:relative;
+  height: 105rpx;
+  border-top:2rpx solid #d8d8d8;
+}
+.warning{
+font-size:28rpx;
+height:40rpx;
+line-height:40rpx;
+color:red;
+text-align:center;
+width:100%;
+}
+.touzhu{
+font-size:28rpx;
+color:red;
+margin:0 auto;
+width:200rpx;
+display:block;
+text-align:center;
+}
+.jixuan{
+width:170rpx;
+height:150rpx;
+font-size:28rpx;
+position:absolute;
+bottom:70rpx;
+border:3rpx solid #ccc;
+background-color:#fff;
+opacity:1;
+border-radius:10rpx;
+left:20rpx;
+}
+.one,.five,.ten{
+border-bottom:1px solid #ccc;
+width:150rpx;
+height:48rpx;
+margin-left:10rpx;
+text-align:center;
+}
+.ten{
+  border-bottom:none;
+}
+.button{
+position:absolute;
+font-size:30rpx;
+height:80rpx;
+line-height:80rpx;
+text-align: center;
+top: 40rpx;
+}
+.morechoose{
+width:150rpx;
+margin-right:10rpx;
+left:20rpx;
+background-color: #3399ff;
+}
+.confirm{
+right:20rpx;
+width:520rpx;
+background-color:#cc3333;
+color:#fff;
+}

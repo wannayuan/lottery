@@ -1,0 +1,40 @@
+<view class="kaijiangContainer">
+<view class="kaijiang">
+<view class='header'>
+ <view class='header-top'>
+ <!--期号，开奖日期  -->
+  <view class='information'>
+   <text class="Qihao">第{{daletouQihao}}期</text>
+   <text class="kaijiangTime">开奖日期:{{daletouTime}}</text>
+  </view>
+  <!--中奖号码  -->
+   <view class='ballNumer'>
+    <!--红球  -->
+    <block wx:for="{{daletouRedballs}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorR"><view class="ball-radius selected1">{{item}}</view></view>
+   </block> 
+  <!--蓝球-->
+   <block wx:for="{{daletouBlueballs}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorB"><view class="ball-radius selected2}}">{{item}}</view></view>
+   </block>
+    </view>
+ </view>
+ <!--销量，奖池信息  -->
+ <view class='header-bottom'>
+  <view class='bottomBox'> <view> <image src=""></image><text class="tittle">本期销量</text></view><text class='content'>{{daletouXiaoliang}}元</text></view>
+  <text class='sepatator'>|</text>
+  <view class='bottomBox'><view> <image src=""></image><text class="tittle">累积奖池</text></view><text class='content'>{{daletouJiangchi}}元</text></view>
+ </view>
+ </view>
+ <!--中奖表单  -->
+ <view class='prizeTable'>
+ <view class="prizeTr"><text class='prizeClass'>奖级</text><text class='prizeZhushu'>中奖注数</text><text class='prizeZhushu'>单注奖金</text></view>
+  <block wx:for="{{prize}}">
+    <view class="prizeTr"><text class='prizeClass'>{{item.jiangji}}</text><text class='prizeZhushu'>{{item.zhongjiangzhushu}}</text><text class='prizeMoney'>{{item.zhongjiangjine}}</text></view>
+  </block>
+ </view>
+</view>
+<view class="bottomBtn">
+ <view class='btn' bindtap='shop'>点击投注大乐透</view>
+</view>
+</view>

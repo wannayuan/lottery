@@ -1,0 +1,17 @@
+<!--登录注册界面 -->
+<view class="signBox">
+   <view class="signBottom">欢迎登录</view>
+   <view class='signContent'>
+    <input type='text' placeholder='请输入手机号/用户名' bindblur='inputnickname' value="{{username}}" class='username'><text class='loginWarning'>{{loginWarning}}</text></input>
+    <input type='password' placeholder='请输入密码' bindblur='inputpassword' value="{{password}}"></input>
+    <checkbox-group bindchange='zidongLogin' class='link'>
+      <checkbox color='#cc3333' value='自动登录'>自动登录</checkbox>
+    </checkbox-group>
+    <checkbox-group bindchange='remember' class='link'>
+      <checkbox color='#cc3333' value='记住密码'>记住密码</checkbox>
+    </checkbox-group>
+    <text class='link' bindtap='forgetpass'>找回密码</text>
+   </view>
+   <button class='login' bindtap='login'>登录</button>
+   <text class='link' bindtap='register' style='color:#cc3333;'>前去注册</text>
+</view>

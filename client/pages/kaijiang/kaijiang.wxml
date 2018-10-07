@@ -1,0 +1,69 @@
+<!--pages/kaijiang/kaijiang.wxml-->
+<!--滚动条，中奖信息  -->
+   <!--滚动条，中奖信息  -->
+  <view class="scroll-bar" bindtap='gift'>
+  <image src='../../images/laba.png'></image>
+  <swiper class="scroll" autoplay="{{autoplay}}" interval="2000"  vertical="false" circular="{{circular}}">
+  <block wx:for="{{person}}">
+  <swiper-item>
+   <view class="classname"><text>恭喜！用户{{item.title}}喜中{{item.type}}<text class='zhongjiangPerson'>{{item.money}}</text>元</text></view>
+  </swiper-item>
+  </block>
+  </swiper>
+  </view>
+  <view class='lotterytType' data-data="双色球" bindtap='history'>
+   <view class="icon"><image src="../../images/shuangseqiu.png"></image></view>
+   <view class='content'>
+    <view class='information'>
+     <text class='ballType'>双色球</text>
+     <text class='Qihao'>第{{shuangseqiuQihao}}期</text>
+    </view>
+    <view class='ballNumer'>
+    <!--红球  -->
+    <block wx:for="{{shuangseqiuRedballs}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorR"><view class="ball-radius selected1">{{item}}</view></view>
+   </block> 
+  <!--蓝球-->
+   <block wx:for="{{shuangseqiuBlueballs}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorB"><view class="ball-radius selected2}}">{{item}}</view></view>
+   </block>
+    </view>
+   </view>
+   <view class="arrow"> > </view>
+  </view>
+  <view class='lotterytType' data-data="大乐透" bindtap='history'>
+    <view class="icon"><image src="../../images/daletou.png"></image></view>
+   <view class='content'>
+    <view class='information'>
+     <text class='ballType'>大乐透</text>
+     <text class='Qihao'>第{{daletouQihao}}期</text>
+    </view>
+    <view class='ballNumer'>
+    <!--红球  -->
+    <block wx:for="{{daletouRedballs}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorR"><view class="ball-radius selected1">{{item}}</view></view>
+   </block> 
+  <!--蓝球-->
+   <block wx:for="{{daletouBlueballs}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorB"><view class="ball-radius selected2}}">{{item}}</view></view>
+   </block>
+    </view>
+   </view>
+   <view class="arrow"> > </view>
+  </view>
+    <view class='lotterytType' data-data="七星彩" bindtap='history'>
+      <view class="icon"><image src="../../images/qixingcai.png"></image></view>
+   <view class='content'>
+    <view class='information'>
+     <text class='ballType'>七星彩</text>
+     <text class='Qihao'>第{{qixingcaiQihao}}期</text>
+    </view>
+    <view class='ballNumer'>
+    <!-- 红球  -->
+     <block wx:for="{{qixingcaiBalls}}">
+     <view class="ball" data-id="{{item}}" bindtap="changecolorR"><view class="ball-radius selected1">{{item}}</view></view> 
+   </block>   
+    </view>
+   </view>
+   <view class="arrow"> > </view>
+  </view>

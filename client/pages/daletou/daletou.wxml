@@ -1,0 +1,30 @@
+<!--pages/daletou/daletou.wxml-->
+<view class="colorBall">
+ <!--红球区域  -->
+ <view class="redBall clearfix">
+   <view class="chooseRed"><text>选择红球(至少选择5个红球)</text></view>
+   <view class="clearfix ballBox" >
+   <block wx:for="{{arrayRed}}">
+    <view class="ball" data-id="{{item.text}}" bindtap="changecolorR"><view class="ball-radius {{item.changeColor?'normal':'selected1'}}">{{item.text}}</view></view>
+   </block>
+   </view>
+ </view>
+ <view class="blueBall">
+   <view class="chooseBlue"><text>选择蓝球(至少选择2个蓝球)</text></view>
+   <view class="clearfix ballBox">
+   <block wx:for="{{arrayBlue}}">
+    <view class="ball" data-id="{{item.text}}" bindtap="changecolorB"><view class="ball-radius {{item.changeColor?'normal':'selected2'}}">{{item.text}}</view></view>
+   </block>
+   </view>
+ </view>
+<view class="warning"><text wx:if="{{warning}}">{{warningText}}</text></view>
+ <view class="buttons">
+ <text class="touzhu" wx:if="{{totalZhushu!=''&&totalMoney!=''}}">一共{{totalZhushu}}注{{totalMoney}}元</text>
+ <view class="jixuan" wx:if="{{jixuan}}"><view class="one" data-data="1" bindtap="randomNumber">1注</view><view class="five" data-data="5" bindtap="randomNumber">5注</view><view class="ten" data-data="10" bindtap="randomNumber">10注</view></view>
+ <view>
+ <button class="button morechoose " bindtap="jixuan">机选</button>
+ <button class="button confirm" bindtap="hemai">确认选号</button>
+ </view>
+ </view>
+</view>
+

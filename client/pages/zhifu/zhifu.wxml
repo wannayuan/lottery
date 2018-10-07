@@ -1,0 +1,36 @@
+<view class="mainBox" stype="width:605rpx">
+<view class='top'><text>请选择支付方式</text></view>
+<!--微信支付-->
+<view class='choose' bindtap='zhifu' data-data="wechat">
+<image src='../../images/wechat.jpg'></image>
+<view class='middleText'>
+<text class='method'>微信支付</text>
+<text class='description'>安全保障，推荐给微信钱包用户使用</text>
+</view>
+<view class='rightText'>
+<text>></text>
+</view>
+</view>
+<!--支付宝支付-->
+<view class='choose' bindtap='zhifu' data-data="zhifubao">
+<image src='../../images/zhifubao.jpg'></image>
+<view class='middleText'>
+<text class='method'>支付宝支付</text>
+<text class='description'>待开通</text>
+</view>
+<view class='rightText'>
+<text>></text>
+</view>
+</view>
+<!--更多支付方式按钮 -->
+<view class='moreMethod' bindtap='moreMethod'>更多支付方式</view>
+<!--最下方说明文字-->
+<view class='bottomText'>
+<text>
+  <text class='title'>温馨提示：</text> 
+  1)为了防止信用卡套现等行为，消费金额达到充值金额（不含奖金）的30%，申请提现予以正常办理
+  2)消费金额不足充值金额（不含奖金）的30%，申请提现收取10%的异常提现手续费
+</text>
+</view>
+</view>
+

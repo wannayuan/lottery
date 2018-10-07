@@ -1,0 +1,89 @@
+.mainBox{
+background-color:#ccc;
+padding:20rpx 20rpx 40rpx 20rpx;
+height: 1150rpx;
+position:relative;
+}
+.top{
+margin-bottom:20rpx;
+font-size:30rpx;
+}
+.choose{
+  background-color: #fff;
+  padding:20rpx;
+  border-radius:10rpx;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+.choose image{
+width: 100rpx;
+height:100rpx;
+margin-right:20rpx;
+float:left;
+}
+.choose .tuijian{
+  width:60rpx;
+  height:70rpx;
+  position:absolute;
+  top:0;
+  right:60rpx;
+}
+.middleText{
+ display:inline-block;
+ height:100rpx;
+}
+.rightText{
+  position:absolute;
+  right:20rpx;
+  top:75rpx;
+}
+.method{
+  display:block;
+  font-size:32rpx;
+  font-weight:bolder;
+  line-height:55rpx;
+}
+.description{
+  display:block;
+  font-size:28rpx;
+}
+.moreMethod{
+  width:250rpx;
+  background-color:#3399ff;
+  height:80rpx;
+  border-radius:10rpx;
+  font-size:32rpx;
+  color:#fff;
+  text-align:center;
+  line-height:80rpx;
+  float:right;
+  margin-bottom:150rpx;
+}
+.bottomText{
+  clear:right;
+  font-size:28rpx;
+  position:absolute;
+  bottom:40rpx;
+}
+.bottomText .title{
+  font-size: 32rpx;
+  font-weight: bolrder;
+}
+.toast_box {  
+width:200rpx;
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:50%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+}  
+.toast_content {  
+  padding:6rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+}  

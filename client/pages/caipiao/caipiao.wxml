@@ -1,0 +1,122 @@
+<!--caipiao.wxml-->
+
+<view class="main">
+<!--头部轮播图  -->
+  <view class="header">
+    <swiper indicator-dots="{{indivatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}">
+      <swiper-item>
+       <image src="{{item.src}}" class="slide-image" data-type="{{item.type}}" bindtap='shoplottery'/>
+       </swiper-item>
+     </block>
+    </swiper>
+  </view>
+  <!--滚动条，中奖信息  -->
+  <view class="scroll-bar" bindtap='gift'>
+  <image src='../../images/laba.png'></image>
+  <swiper class="scroll" autoplay="{{autoplay}}" interval="2000"  vertical="false" circular="{{circular}}">
+  <block wx:for="{{person}}">
+  <swiper-item>
+   <view class="classname"><text>恭喜！用户***{{item.username}}喜中{{item.type}}<text class='zhongjiangPerson'>{{item.prizeMoney}}</text>元</text></view>
+  </swiper-item>
+  </block>
+  </swiper>
+  </view>
+  <!--活动的效果图-->
+  <view class='giftImage'>
+  <image src='../../images/gift.png'></image>
+  </view>
+<view class='lotteryBox'>
+<view class="lottery">
+  <view class="lotteryType" bindtap="shoplottery" data-type="shuangseqiu">
+   <view class="icon"><image src="../../images/shuangseqiu.png"></image></view>
+   <view class="type">
+   <text class='rightText'>双色球</text>
+    <view class='introduce'>
+    <image src='../../images/bg_red.png'></image>
+    <block wx:if="{{shuangKaiJiang=='true'}}">
+     <text>今日开奖</text>
+    </block>
+    <block wx:else>
+    <text>2元可中1000万</text>
+    </block>
+   </view>
+   </view>
+  </view>
+  <view class="lotteryType" bindtap='shoplottery' data-type='daletou'>
+   <view class="icon"><image src="../../images/daletou.png"></image></view>
+   <view class="type">
+   <text class='rightText'>大乐透</text>
+   <view class='introduce'>
+    <image src='../../images/bg_red.png'></image>
+    <block wx:if="{{daletouKaiJiang=='true'}}">
+     <text>今日开奖</text>
+    </block>
+    <block wx:else>
+    <text>奖池高达14.82亿</text>
+    </block>
+   </view>
+   </view>
+  </view> 
+</view>
+<view class="lottery">
+  <view class="lotteryType" bindtap="shoplottery" data-type='jingcaizuqiu'>
+   <view class="icon"><image src="../../images/jingcaizuqiu.png"></image></view>
+   <view class="type">
+   <text class='rightText'>竞彩足球</text>
+   <view class='introduce'>
+    <image src='../../images/bg_red.png'></image>
+    <block wx:if="{{jingKaiJiang=='true'}}">
+     <text>今日开奖</text>
+    </block>
+    <block wx:else>
+    <text>联赛劲爆回归 </text>
+    </block>
+   </view>
+   </view>
+  </view>
+  <view class="lotteryType" bindtap="shoplottery" data-type='qixingcai'>
+   <view class="icon"><image src="../../images/qixingcai.png"></image></view>
+   <view class="type">
+   <text class='rightText'>七星彩</text>
+   <view class='introduce'>
+    <image src='../../images/bg_red.png'></image>
+    <block wx:if="{{qixingcaiKaiJiang=='true'}}">
+     <text>今日开奖</text>
+    </block>
+    <block wx:else>
+    <text>2元可中500万</text>
+    </block>
+   </view>
+   </view>
+  </view> 
+</view>
+<view class="lottery">
+  <view class="lotteryType" bindtap="shoplottery" data-type="fucai3D">
+   <view class="icon"><image src="../../images/fucai3D.png"></image></view>
+   <view class="type">
+   <text class='rightText'>福彩3D</text>
+   <view class='introduce'>
+    <image src='../../images/bg_red.png'></image>
+    <block wx:if="{{fucaiKaiJiang=='true'}}">
+     <text>用户喜中20.8万</text>
+    </block>
+    <block wx:else>
+    <text>2元可中1000万</text>
+    </block>
+   </view>
+   </view>                    
+  </view>
+  <view class="lotteryType" bindtap='more'>
+   <view class="icon"><image src="../../images/more.png"></image></view>
+   <view class="type">
+   <text class='rightText'>更多彩种</text>
+   <view class='introduce'>
+   <image src="../../images/bg_red.png"></image>
+   <text>点击展开</text>
+   </view>
+   </view>
+  </view> 
+</view>
+</view>
+</view>

@@ -1,0 +1,373 @@
+/* touzhu.wxss */
+.lotteryBox{
+  background-color: #eee;
+}
+.lotteryType{
+ margin:15rpx;
+ font-family:"微软雅黑";
+ font-size:32rpx;
+ margin-top: 0;
+}
+#shop{
+  padding-top:20rpx;
+  height: 60rpx;
+}
+.type{
+  display: inline-block;
+  margin-right:10rpx;
+}
+.value{
+  font-size:28rpx;
+  color:#000;
+}
+.icon,.number{
+display:inline-block;
+font-size:32rpx;
+width:60rpx;
+height:50rpx;
+border:2rpx solid #d8d8d8;
+text-align:center;
+}
+.number{
+  background-color: none;
+  width: 100rpx;
+}
+.baodi{
+  margin-top: 10rpx;
+}
+.multiply{
+float:left;
+margin-right:10rpx;
+}
+.clearfix{
+  clear: both;
+}
+.ball{
+float:left;
+width:107rpx;
+height:107rpx;
+text-align:center;
+line-height:107rpx;
+font-size:28rpx;
+position:relative;
+}
+.ball-radius{
+width:40rpx;
+height:40rpx;
+position:absolute;
+top:33rpx;
+left:33rpx;
+line-height:40rpx;
+border-radius:20rpx;
+color:#000;
+background-color:gainsboro;
+}
+.shop{
+width:200rpx;
+text-align:center;
+border:2rpx solid #d8d8d8;
+float:left;
+}
+.lotteryShop{
+  float:left;
+}
+.chooseRed{
+  color:red;
+}
+.chooseBlue{
+  color:blue;
+}
+.selectBalls{
+height:400rpx;
+overflow-y:scroll;
+background-color:#eee;
+width: 100%;
+border:2rpx solid #d8d8d8;
+border-left:none;
+border-right: none;
+}
+.selectBox{
+height:140rpx;
+width:700rpx;
+margin:20rpx auto;
+font-size:32rpx;
+border-bottom:none;
+position:relative;
+background-color:#fff;
+border-radius:10rpx;
+}
+.scrollNormal{
+  width:204rpx;
+  height:46rpx;
+  float:left;
+}
+.scrollselect{
+  width:204rpx;
+  height:270rpx;
+  float:left;
+}
+.item{
+  width:204rpx;
+  height:46rpx;
+  border:2rpx solid #d8d8d8;
+  line-height:46rpx;
+  text-align: center;
+}
+/*button*/
+.btn { 
+ width: 80%; 
+ padding: 20rpx 0; 
+ border-radius: 10rpx; 
+ text-align: center; 
+ margin: 40rpx 10%; 
+ background: #000; 
+ color: #fff; 
+} 
+  
+/*mask*/
+.drawer_screen,.toast_mask { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+} 
+  
+/*content*/
+.drawer_box ,.ID_box{ 
+ width: 600rpx; 
+ height: 600rpx;
+ overflow: hidden; 
+ position: fixed; 
+ top: 50%; 
+ left:0%;
+ z-index: 1001; 
+ background: #FAFAFA; 
+ margin:-300rpx 70rpx;
+ border-radius:3px; 
+} 
+.ID_box{
+  height:300rpx;
+  margin:-200rpx 70rpx;
+}
+.drawer_title{ 
+height:80rpx;
+background-color:#cc3333;
+color:#fff;
+text-align:center;
+font-size:30rpx;
+line-height:80rpx;
+} 
+.drawer_content { 
+ height: 210px; 
+} 
+.note{
+font-size:26rpx;
+padding:10rpx;
+} 
+.ID_box .note{
+text-align:center;
+height:80rpx;
+}
+.drawer_content radio-group{
+  height:300rpx;
+  overflow-y: scroll;
+}
+.list{
+border-bottom:2rpx solid #d8d8d8;
+font-size:28rpx;
+height:50rpx;
+}
+.btn_ok,.IDbuttons{ 
+position:absolute;
+bottom:0;
+height:60rpx;
+border-top:2rpx solid #d8d8d8;
+padding:10rpx 20rpx;
+width:560rpx;
+} 
+.btn_ok button{
+height:60rpx;
+line-height:60rpx;
+color:#fff;
+font-size:30rpx;
+background-color:#cc3333;
+}
+.bottom{
+height:120rpx;
+padding-top:40rpx;
+border-top:2rpx solid #d8d8d8;
+padding:10rpx 20rpx 20rpx 20rpx;
+width:710rpx;
+background-color: #fff;
+}
+.submit{
+ background-color:#cc3333;
+ color: #fff;
+}
+.chooseShop{
+float:left;
+font-size:28rpx;
+height:40rpx;
+border:2rpx solid #d8d8d8;
+background-color:#eee;
+padding:10rpx;
+min-width:140rpx;
+}
+.eachMoney{
+  color: red;
+}
+#changeFenshu ,#changeBaodi{
+border:2rpx solid #d8d8d8;
+padding:15rpx;
+border-radius:15rpx;
+padding-top: 0;
+}
+.clearNumber,.arrow{
+text-align:center;
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+color:#a09f9f;
+}
+.clearNumber{
+width:40rpx;
+height:40rpx;
+line-height:40rpx;
+border:2rpx solid #ccc;
+border-radius:50%;
+left:10rpx;
+background-color:#fff;
+}
+.arrow{
+right: 0;
+width:80rpx;
+height:80rpx;
+line-height:80rpx;
+}
+.middleNumber{
+width:550rpx;
+padding:20rpx 0;
+height:70rpx;
+position:absolute;
+left:70rpx;
+}
+.ballNumber{
+font-size:34rpx;
+width:60rpx;
+display:inline-block;
+height:60rpx;
+line-height:60rpx;
+font-weight:bolder;
+}
+.bottomNote{
+font-size:28rpx;
+height:30rpx;
+}
+input{
+  overflow:inherit;
+  min-height:50rpx;
+}
+.chooseball{
+display:inline-block;
+height:80rpx;
+border:2rpx solid #d8d8d8;
+line-height:70rpx;
+font-size:28rpx;
+padding:5rpx 20rpx;
+margin-right:10rpx;
+width:212rpx;
+}
+.buttons{
+  height: 80rpx;
+  padding: 10rpx 40rpx;
+  border-bottom: 2rpx solid #d8d8d8;
+  background-color: #fff;
+}
+.small{
+font-size:26rpx;
+}
+.pay{
+font-size:26rpx;
+text-align:center;
+padding-bottom:2px;
+}
+#hemai{
+  background-color:#cc3333;
+  color: #fff;
+}
+#moreBalls{
+  background-color: #ff9933;
+  color: #fff;
+}
+#jixuanOne{
+  background-color: #3399ff;
+  color:#fff;
+}
+.selectHemai{
+  height:810rpx;
+}
+.mine{
+background-color:#fff;
+height:60rpx;
+padding:20rpx;
+}
+.mine .baodi{
+  float: right;
+}
+.mine .icon,.mine .number{
+  background-color:#eee;
+}
+.toast_mask {  
+  opacity: 0;  
+  width: 100%;  
+  height: 100%;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 888;  
+}
+.toast_box {  
+width:200rpx;
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:50%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+}  
+.toast_content {  
+  padding:6rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+}  
+.give,.confirm{
+display:inline-block;
+width:260rpx;
+border:2rpx solid #d8d8d8;
+text-align:center;
+height:50rpx;
+border-radius:10rpx;
+background-color:#cc3333;
+color:#fff;
+font-size:30rpx;
+line-height:50rpx;
+}
+.give{
+  margin-right: 20rpx;
+}
+.checkzhui{
+float:left;
+margin-left:10px;
+font-size:26rpx;
+}
+

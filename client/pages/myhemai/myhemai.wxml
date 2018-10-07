@@ -1,0 +1,39 @@
+<view class='prizeState'>
+<view class="choose wx:if={{prizeState==1?'checked':''}}" data-prizeState="1" bindtap='changeState'>全部</view>
+ <view class="choose wx:if={{prizeState==2?'checked':''}}"data-prizeState="2" bindtap='changeState'>已中奖</view>
+ <view class="choose wx:if={{prizeState==3?'checked':''}}" data-prizeState="3" bindtap='changeState'>待开奖</view>
+ <view class="choose wx:if={{prizeState==4?'checked':''}}" data-prizeState="4" bindtap='changeState'>未完成</view>
+</view>
+<view wx:if="{{hemaiOrder==false}}" class='noOrder'>
+ <text>暂无订单信息!</text>
+</view>
+<view class='hemaiOrder'>
+   <block wx:for="{{hemaiOrder}}">
+   <view class='order'>
+    <view class='orderTop wx:if={{index%2==0?"gray":""}}'>
+     <text>{{item.lotterytype}}</text><text>期号:{{item.issue}}</text><text>发起人:{{item.username}}</text>
+     <block wx:if="{{item.select}}">
+     <view data-index="{{index}}"  bindtap='changeSelect'>
+      <image src='../../images/up.png'></image>
+     </view>
+     </block>
+     <block wx:else>
+     <view data-index="{{index}}" bindtap='changeSelect'> 
+     <image src="../../images/down.png"></image>
+     </view>
+     </block>
+    </view>
+    <block wx:if="{{item.select}}">
+     <view class='orderBottom'>
+    <view class='bottomLeft'>
+    <text>号码:{{item.betnumber}}</text>
+    <text>完成率:{{item.percent}}%</text>
+    </view>
+    <view class='bottomRight'>
+    <image src='../../images/selectOrder.jpg'></image>
+    </view>
+    </view>
+     </block>
+   </view>
+   </block>
+</view>

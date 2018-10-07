@@ -1,0 +1,43 @@
+<!--information.wxml-->
+<view class="box">
+<view class="information_Box">
+ <view class="information">
+   <text class="note">真实姓名</text>
+   <input class="value" placeholder="提交信息后将不能修改，请真实填写" value ="{{name}}" bindblur='name'/>
+ </view>
+ <text class="warningText" wx:if="{{nameText}}">{{nameText}}</text>
+  <view class="information">
+   <text class="note">身份证号</text>
+   <input class="value" type='idcard' placeholder="领奖凭证，请真实填写" value='{{IDcard}}'  bindblur='IDcard'/>
+ </view>
+ <text class="warningText" wx:if="{{IDcardText}}">{{IDcardText}}</text>
+  <view class="information" id='phoneNumber'>
+   <text class="note">手机号码</text>
+   <input class="value" type='number' placeholder="请输入您的手机号码" value='{{phoneNumber}}'  bindblur='phoneNumber'/>
+   <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">自动获取</button>
+ </view>
+ <text class="warningText" wx:if="{{phoneNumberText}}">{{phoneNumberText}}</text>
+</view>
+<view class="tips">
+ <text class="tip_content">
+  温馨提示:
+  1.实名信息是领奖唯一凭证，请与身份证保持一致：
+      (a)姓名禁止使用拼音，符号和加姓名;
+      (b)禁止使用虚假错误的身份证号码。
+  2.如因为身份信息问题导致用户无法正常兑奖，本平台不服任何责任!
+  3.如需修改真实姓名和身份证号码，请联系客服;
+ </text>
+</view>
+ <view class="bottom">
+  <button class="submit" bindtap="information">保存</button>
+ </view>
+ <!--自定义弹出窗口-->
+<!--mask-->  
+<view class="toast_mask" wx:if="{{toastText!=''}}"></view>  
+<!--以下为toast显示的内容-->  
+<view class="toast_box" wx:if="{{toastText!=''}}">  
+  <view class="toast_content">  
+      {{toastText}}  
+    </view>   
+</view>
+ </view>

@@ -1,0 +1,42 @@
+ <view class='prizeState' wx:if="{{qixingcaiHemai==false}}">
+<view  class='noOrder'>
+ <text>暂无合买订单!</text>
+</view>
+</view> 
+<view class='hemaiOrder' wx:else>
+   <block wx:for="{{qixingcaiHemai}}">
+   <view class='order'>
+    <view class='orderTop'>
+     <text>{{item.lotterytype}}</text><text>期号:{{item.issue}}</text><text>发起人:{{item.username}}</text>
+    </view>
+     <view class='orderBottom' bindtap='shopHemai' data-index="{{index}}" data-type="{{item.lotterytype}}">
+    <view class='bottomLeft'>
+      <view class='leftXiang'>
+        <text>号码:{{item.betnumber}}</text>
+      </view>
+      <view class='leftXiang'>
+        <text>总倍数:{{item.multiple}}倍</text>
+      </view>
+      <view class='leftXiang'>
+        <text>总份数:{{item.copies}}份</text>
+        <text>剩余份数:{{item.lastcopies}}份</text>
+        <text>完成率:{{item.percent}}%</text>
+      </view>
+    </view>
+    <view class='bottomRight'>
+    <image src='../../images/selectOrder.jpg'></image>
+    </view>
+    </view>
+   </view>
+   </block>
+      <!--自定义弹出窗口-->
+  <!--mask-->  
+  <view class="toast_mask" wx:if="{{toastText!=''}}"></view>  
+  <!--以下为toast显示的内容-->  
+  <view class="toast_box" wx:if="{{toastText!=''}}">  
+   <view class="toast_content">  
+    {{toastText}}  
+   </view>   
+  </view>
+</view>
+

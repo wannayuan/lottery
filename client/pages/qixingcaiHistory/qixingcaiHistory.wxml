@@ -1,0 +1,17 @@
+<block wx:for="{{qixingcaiInformation}}">
+<view class='lotterytType' data-data="七星彩" bindtap='kaijiang' data-url="{{item.url}}" data-index="{{index}}">
+   <view class='content'>
+    <view class='information'>
+     <text class='ballType'>第{{item.qihao}}期</text>
+     <text class='Qihao'>{{item.kaijiangTime}}</text>
+    </view>
+    <view class='ballNumer'>
+    <!--红球  -->
+    <block wx:for="{{item.balls}}">
+    <view class="ball" data-id="{{item}}" bindtap="changecolorR"><view class="ball-radius selected1">{{item}}</view></view>
+   </block> 
+    </view>
+   </view>
+   <view class="arrow"> > </view>
+  </view>
+</block>

@@ -1,0 +1,68 @@
+/* pages/daletouHistory/daletouHistory.wxss */
+.ball{
+float:left;
+width:70rpx;
+height:70rpx;
+text-align:center;
+line-height:64rpx;
+font-size:32rpx;
+position:relative;
+color:#fff;
+}
+.ball-radius{
+width:60rpx;
+height:60rpx;
+position:absolute;
+top:6rpx;
+left:6rpx;
+line-height:60rpx;
+border-radius:30rpx;
+border:2rpx solid #ddd;
+font-weight: bolder;
+}
+.selected1{
+  background-color:#cc3333;
+  color:#fff;
+}
+.selected2{
+  background-color:#3399ff;
+  color:#fff;
+}
+.ballNumber{
+  height: 140rpx;
+}
+.lotterytType{
+height:120rpx;
+padding:20rpx;
+background-color:#eee;
+border-bottom:2rpx solid #ddd;
+}
+.content{
+width:570rpx;
+height:130rpx;
+float:left;
+}
+.information{
+height:50rpx;
+line-height:50rpx;
+margin-bottom:10rpx;
+padding-left: 8rpx;
+}
+.Qihao{
+font-size:25rpx;
+display: inline-block;
+padding-left: 20rpx;
+
+}
+.ballType{
+  font-weight: bolder;
+  font-size: 30rpx;
+}
+.arrow{
+width:80rpx;
+height:120rpx;
+float:right;
+vertical-align:middle;
+line-height:120rpx;
+text-align:center;
+}

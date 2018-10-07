@@ -1,0 +1,54 @@
+/* pages/signup/signup.wxss */
+.signBox{
+border-radius:10rpx;
+margin-left:2%;
+border:solid 2rpx #eee;
+padding-bottom:20rpx;
+top:40%;
+position:fixed;
+transform:translateY(-50%);
+width:96%;
+}
+.signBottom{
+height: 150rpx;
+background-color:#cc3333;
+text-align:center;
+line-height:150rpx;
+color:white;
+font-size:40rpx;
+}
+.signContent{
+width:80%;
+margin:50rpx auto 30rpx;
+}
+input{
+height:100rpx;
+line-height:200rpx;
+border-bottom:solid 2rpx #eee;
+display:block; 
+}
+.login{
+background-color:#cc3333;
+color:white;  
+width:85%;
+margin:0 auto;
+}
+.link{
+font-size:28rpx;
+width:30%;
+display:inline-block;
+margin-right:2%;
+margin-left:1%;
+text-align:center;
+margin-top:30rpx;
+}
+.loginWarning{
+color:red;
+position:absolute;
+right:10rpx;
+top:-50%;
+font-size:24rpx;
+}
+.username{
+  position: relative;
+}

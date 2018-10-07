@@ -1,0 +1,81 @@
+.prizeState{
+height:50rpx;
+padding:25rpx 0rpx 25rpx 26rpx;
+}
+.choose{
+display:inline-block;
+width:212rpx;
+background-color:#999999;
+height:50rpx;
+border-radius:15rpx;
+color:#fff;
+text-align:center;
+margin-right: 26rpx;
+}
+.checked{
+  background-color: #cc3333;
+}
+.orderTop{
+height:70rpx;
+line-height:70rpx;
+padding-left:30rpx;
+position:relative;
+background-color: #999999;
+}
+.orderTop text{
+  margin-right: 50rpx;
+  font-size:34rpx;
+}
+.orderBottom{
+  border-bottom:2rpx solid #999999;
+}
+.orderBottom text{
+padding-left:30rpx;
+height:60rpx;
+line-height:60rpx;
+font-size: 30rpx;
+}
+.bottomRight image{
+  width:55rpx;
+  height:55rpx;
+  position: absolute;
+  top: -95rpx;
+}
+.bottomLeft{
+  display: inline-block;
+  width: 680rpx;
+}
+.bottomRight{
+  display: inline-block;
+  position: relative;
+}
+.orderTop image{
+  width: 55rpx;
+  height: 55rpx;
+  position:absolute;
+  top:10rpx;
+  right:16rpx;
+}
+.noOrder{
+height:200rpx;
+text-align:center;
+padding-top:50rpx;
+}
+.toast_box {  
+width:200rpx;
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:50%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+}  
+.toast_content {  
+  padding:6rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+}  

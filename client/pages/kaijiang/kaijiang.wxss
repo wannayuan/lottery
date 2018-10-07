@@ -1,0 +1,102 @@
+/* pages/kaijiang/kaijiang.wxss */
+.scroll-bar{
+width:100%;
+height:70rpx;
+text-align:left;
+line-height:70rpx;
+font-size:28rpx;
+border:2rpx solid #d8d8d8;
+padding-left: 25rpx;
+}
+.scroll-bar image{
+  width:40rpx;
+  height:40rpx;
+  padding-bottom:15rpx;
+}
+.scroll{
+height:70rpx;
+padding-left:20rpx;
+width:600rpx;
+display:inline-block;
+}
+.zhongjiangPerson{
+  color:red;
+}
+.ball{
+float:left;
+width:70rpx;
+height:70rpx;
+text-align:center;
+line-height:64rpx;
+font-size:32rpx;
+position:relative;
+color:#fff;
+}
+.ball-radius{
+width:60rpx;
+height:60rpx;
+position:absolute;
+top:6rpx;
+left:6rpx;
+line-height:60rpx;
+border-radius:30rpx;
+border:2rpx solid #ddd;
+font-weight: bolder;
+}
+.selected1{
+  background-color:#cc3333;
+  color:#fff;
+}
+.selected2{
+  background-color:#3399cc;
+  color:#fff;
+}
+.ballNumer{
+  height:70rpx;
+  width: 490rpx;
+}
+.lotterytType{
+height:120rpx;
+padding:20rpx;
+background-color:#fff;
+border-bottom:2rpx solid #ddd;
+margin: 20rpx;
+}
+.content{
+width:440rpx;
+height:130rpx;
+display: inline-block;
+padding-left:20rpx;
+}
+.information{
+height:50rpx;
+line-height:50rpx;
+margin-bottom:10rpx;
+padding-left: 8rpx;
+}
+.Qihao{
+font-size:28rpx;
+display:inline-block;
+padding-left:60rpx;
+color:#ff9900;
+}
+.ballType{
+  font-size: 28rpx;
+}
+.arrow{
+width:18rpx;
+height:120rpx;
+float:right;
+vertical-align:middle;
+line-height:120rpx;
+text-align:center;
+}
+.icon{
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+}
+.icon image{
+  width: 120rpx;
+  height: 120rpx;
+}

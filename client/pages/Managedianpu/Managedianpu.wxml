@@ -1,0 +1,16 @@
+<view class='prizeState'>
+ <view class="choose wx:if={{prizeState==1?'checked':''}}" data-prizeState="1" bindtap='changeState'>未出票</view>
+ <view class="choose wx:if={{prizeState==2?'checked':''}}"data-prizeState="2" bindtap='changeState'>已出票</view>
+</view>
+<block wx:for="{{chupiao}}">
+  <view class="chupiaoBox">
+    <view class="betnumber">{{item.betnumber}}</view>
+    <view wx:if="{{prizeState==1&&item.state==1}}" bindtap='chupiao' class="chupiao" data-data="{{item.id}}" data-index="{{index}}">出票</view>
+     <view wx:if="{{prizeState==1&&item.state==0}}" class="yichupiao" style='width:200rpx;'>出票成功</view>
+    <view wx:if="{{prizeState==2}}" class="yichupiao">已出票</view>
+  </view>
+  <view class="uploader-container" wx:if="{{item.imgUrl}}">
+    <image data-index="{{index}}" class="uploader-image" src="{{item.imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+</view>
+</block>
+<view wx:if="{{tip}}" class="tip">暂无出票信息!</view>

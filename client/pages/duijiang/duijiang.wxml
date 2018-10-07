@@ -1,0 +1,24 @@
+<view class="orderTop"  bindtap="kaijiang">
+  <text class='lotteryType'>双色球</text><text class='kaijiang' data-data="shuangseqiu" bindtap='kaijiang' wx:if="{{shuangkai=='false'}}">开奖</text><text wx:if="{{shuangkai=='true'}}" class='kaijiang checked'>开奖</text>
+</view>
+<view class="orderTop" bindtap='kaijiang'>
+ <text class='lotteryType'>大乐透</text><text class='kaijiang' data-data="daletou" bindtap='kaijiang' wx:if="{{dakai=='false'}}">开奖</text><text wx:if="{{dakai=='true'}}" class='kaijiang checked'>开奖</text>
+</view>
+<view class='orderTop' bindtap='kaijiang'>
+ <text class='lotteryType'>七星彩</text><text class='kaijiang' data-data="qixingcai" bindtap='kaijiang' wx:if="{{qikai=='false'}}">开奖</text><text wx:if="{{qikai=='true'}}" class='kaijiang checked'>开奖</text>
+</view>
+<view class='orderTop' bindtap='kaijiang'>
+ <text class='kaijiang' wx:if="{{allkai=='false'}}" data-data="allKaijiang" bindtap='kaijiang'>一键开奖</text><text class='kaijiang checked' data-data="allKaijiang" wx:if="{{allkai=='true'}}">一键开奖</text>
+</view>
+<view class='title'>当期中奖情况</view>
+<block wx:if="{{zhong!=''}}">
+<block  wx:for="{{zhong}}">
+  <view class='content'>
+  <text >  用户{{item.username}}中了{{item.type}}{{item.prizedengji}}等奖{{item.prizeMoney}}元</text>
+  <text> 中奖号码{{item.betnumber}}</text>
+  </view>
+</block>
+</block>
+<block wx:else>
+ <view class='tips'>该期没有中奖信息</view>
+</block>

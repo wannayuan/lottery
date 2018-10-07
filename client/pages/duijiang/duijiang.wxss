@@ -1,0 +1,56 @@
+.orderTop{
+height:90rpx;
+padding-left:30rpx;
+position:relative;
+background-color:#999999;
+margin-bottom:20rpx;
+}
+.lotteryType{
+font-size:34rpx;
+width:200rpx;
+display:inline-block;
+float:left;
+line-height:90rpx;
+font-weight:bolder;
+}
+.kaijiang{
+width:150rpx;
+display:inline-block;
+height:50rpx;
+margin-top:20rpx;
+border-radius:15rpx;
+background-color:#cc3333;
+color:#fff;
+text-align:center;
+float:right;
+margin-right:40rpx;
+line-height:50rpx;
+padding-left:20rpx;
+padding-right:20rpx;
+}
+.checked{
+  background-color:gray;
+}
+.content{
+border-bottom:solid 2rpx;
+padding:8rpx 0rpx 10rpx 5rpx;
+height:120rpx;
+line-height:60rpx;
+}
+.title{
+background-color:#cc3333;
+color:white;
+height:100rpx;
+line-height:100rpx;
+text-align:center;
+font-size:42rpx;
+}
+.content text{
+  display:block;
+  padding-left:20rpx;
+}
+.tips{
+  text-align:center;
+  line-height:100px;
+  font-size:40rpx;
+}

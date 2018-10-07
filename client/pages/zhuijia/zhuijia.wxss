@@ -1,0 +1,67 @@
+.prizeState{
+height:50rpx;
+border:2rpx solid #ddd;
+padding:25rpx 0rpx 25rpx 26rpx;
+}
+.choose{
+display:inline-block;
+width:136rpx;
+background-color:#999999;
+height:50rpx;
+border-radius:15rpx;
+color:#fff;
+text-align:center;
+margin-right: 42rpx;
+}
+.checked{
+  background-color: #cc3333;
+}
+.gray{
+  background-color: #999999;
+}
+.orderTop{
+height:70rpx;
+line-height:70rpx;
+padding-left:30rpx;
+position:relative;
+}
+.orderTop text{
+  margin-right: 50rpx;
+  font-size:34rpx;
+}
+.orderBottom{
+  border-bottom:2rpx solid #999999;
+  position:relative;  
+}
+.orderBottom text{
+display:block;
+padding-left:30rpx;
+height:60rpx;
+line-height:60rpx;
+}
+.bottomRight image{
+  width:55rpx;
+  height:55rpx;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+}
+.bottomLeft{
+  display: inline-block;
+  width: 680rpx;
+}
+.bottomRight{
+  display: inline-block;
+}
+.orderTop image{
+  width: 55rpx;
+  height: 55rpx;
+  position:absolute;
+  top:10rpx;
+  right:16rpx;
+}
+.noOrder{
+height:200rpx;
+text-align:center;
+padding-top:50rpx;
+}

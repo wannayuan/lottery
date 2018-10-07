@@ -1,0 +1,136 @@
+<!--pages/wode/wode.wxml-->
+
+<!--头部  -->
+<view class="mineContainer">
+<view class="header">
+<view class="header-top">
+   <view class="header-left">
+   <text class="avatar">昵称:{{userInfo.nickName?userInfo.nickName:'游客用户'}}</text>
+   </view>
+   <view class="header-right">
+    <view class="right-avatar">
+     <image src="../../images/setting.png"></image>
+    <block wx:if="{{login}}"><text class="service" bindtap='loginout'>{{loginText}}</text></block><block wx:else><text class="service" bindtap='login'>{{loginText}}</text></block>
+    </view>
+   </view>
+</view>
+ <view class="header-middle">
+  <view class="account">
+  <view class="headerImage"><image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'../../images/avatar.png'}}"></image></view>
+   <view class="accountBox">
+   <text>账户总额:{{account.totalmoney}}元</text>
+   </view>
+  </view>
+  <view class="moneyBox">
+   <view class="dongjieMoney"><text>冻结金额：{{account.dongjiemoney}}元</text></view>
+   <view class="keyongMoney"><text>可用金额:{{account.usemoney}}元</text></view>
+  </view>
+ </view>
+</view>
+<!-- 充值提款按钮 -->
+ <view class="buttons">
+  <view class="button chongzhi" bindtap='chongzhi'>
+   <image src="../../images/money.png"></image>
+   <text class="buttonText">充值</text>
+  </view>
+  <view class="button tikuan" bindtap='tixian'>
+   <image src="../../images/withdrawals.png"></image>
+   <text class="buttonText">提现</text>
+  </view>
+ </view>
+ <!--订单列表  -->
+ <view class="orders">
+  <view class="order" bindtap="myorder">
+   <view class="orderImage"><image src="../../images/order.png"></image></view>
+   <text class="orderText">全部订单</text>
+  </view>
+ <view class="order" bindtap='zhuijiaOrder'>
+   <view class="orderImage"><image src="../../images/moreOrder.png"></image></view>
+   <text class="orderText">追加订单</text>
+  </view>
+  <view class="order">
+   <view class="orderImage"><image src="../../images/mingxi.png"></image></view>
+   <text class="orderText">资金明细</text>
+  </view>
+  <view class="order">
+   <view class="orderImage"><image src="../../images/tikuan.png"></image></view>
+   <text class="orderText">提现记录</text>
+  </view>
+  </view>
+  <!-- 功能列表 -->
+  <view class="lists">
+   <view class="list" bindtap='information'>
+    <view class="listImage"><image src="../../images/personal-information.png"></image></view>
+    <text class="listText">个人资料</text>
+     <view class="arrow">></view>
+   </view>
+     <view class="list" bindtap='message'>
+    <view class="listImage"><image src="../../images/personal-information.png"></image></view>
+    <text class="listText">手机注册</text>
+     <view class="arrow">></view>
+   </view>
+   <view class="list" bindtap="myhemai">
+    <view class="listImage"><image src="../../images/moreOrder.png"></image></view>
+    <text class="listText">合买订单</text>
+     <view class="arrow">></view>
+   </view>
+    <view class="list" bindtap="ruzhu">
+    <view class="listImage"><image src="../../images/message.png"></image></view>
+    <text class="listText">店家入驻</text>
+     <view class="arrow">></view>
+   </view>
+ <!-- <view wx:if="{{quanxian=='caipiaozhan'||quanxian=='manager'}}" class="list" bindtap="qiangdan">
+    <view class="listImage"><image src="../../images/message.png"></image></view>
+    <text class="listText">我要抢单</text>
+    <view class="arrow">></view>
+  </view> -->
+   <view wx:if="{{quanxian=='caipiaozhan'||quanxian=='manager'}}" class="list" bindtap="Managedianpu">
+   <view class="listImage"><image src="../../images/message.png"></image></view>
+    <text class="listText">出票管理</text>
+    <view class="arrow">></view>
+  </view>
+  <view wx:if="{{quanxian=='caipiaozhan'||quanxian=='manager'}}" class="list" bindtap="duijiang">
+        <view class="listImage"><image src="../../images/tuijian.png"></image></view>
+    <text class="listText">我来开奖</text>
+     <view class="arrow">></view>
+  </view>
+     <view wx:if="{{quanxian=='caipiaozhan'||quanxian=='manager'}}" class="list" bindtap="manage">
+        <view class="listImage"><image src="../../images/tuijian.png"></image></view>
+    <text class="listText">统计分析</text>
+     <view class="arrow">></view>
+  </view> 
+    <view wx:if="{{quanxian=='caipiaozhan'||quanxian=='manager'}}" class="list" bindtap="Manageshenqing">
+        <view class="listImage"><image src="../../images/tuijian.png"></image></view>
+    <text class="listText">申请管理</text>
+     <view class="arrow">></view>
+  </view>
+  </view>
+  <!--自定义弹出窗口-->
+<!--mask-->  
+<view class="toast_mask" wx:if="{{toastText!=''}}"></view>  
+<!--以下为toast显示的内容-->  
+<view class="toast_box" wx:if="{{toastText!=''}}">  
+  <view class="toast_content">  
+      {{toastText}}  
+    </view>   
+</view>
+<!--自定义弹出弹出对话框-->
+<view class='ruzhu_mak' wx:if="{{ruzhu=='true'}}">
+  <view class='ruzhuContainer'>
+    <view class='ruzhuTitle'>
+     <text>提示</text>
+    </view>
+    <view class='ruzhuMessage'>
+     <text class='Information'>
+     <text class='contact'>彩票站入驻，请联系我们哦!</text>
+      公司名:湖工大科技有限公司
+      公司地址:湖南工业大学一食堂
+      联系电话:0102343245
+     </text>
+    </view>
+    <view bindtap='realize' class='realize'>立即申请</view>
+    <view bindtap='giveup' class="nexttime">下次再说</view>
+  </view>
+</view>
+</view>
+

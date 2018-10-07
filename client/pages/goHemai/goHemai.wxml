@@ -1,0 +1,34 @@
+ <view class='prizeState' wx:if="{{hemai=='false'}}">
+<view  class='noOrder'>
+ <text>暂无合买订单!</text>
+</view>
+</view> 
+<view class='hemaiOrder' wx:else>
+   <view class='order'>
+    <view class='orderTop'>
+     <text>{{hemai.lotterytype}}</text><text>期号:{{hemai.issue}}</text><text>发起人:{{hemai.username}}</text>
+    </view>
+     <view class='orderBottom'>
+    <view class='bottomLeft'>
+      <view class='leftXiang'>
+        <text>号码:{{hemai.betnumber}}</text>
+      </view>
+      <view class='leftXiang'>
+        <text>总倍数:{{hemai.multiple}}倍</text>
+        <text wx:if="{{hemai.zhuijia}}" style='font-size:20rpx;color:red'>追加</text>
+      </view>
+      <view class='leftXiang'>
+        <text>总份数:{{hemai.copies}}份</text>
+        <text>剩余份数:{{hemai.lastcopies}}份</text>
+        <text>完成率:{{hemai.percent}}%</text>
+      </view>
+      <view class='leftXiang'>
+        <label>请输入购买份数</label><input type='number' class='shopCopies' bindblur="inputblur" value='{{copies}}'></input>
+        <text wx:if="{{warningText!=''}}" class='warningText'>{{warningText}}</text>
+      </view>
+      <view class='goShop' bindtap='goShop' data-cid="{{hemai.id}}">确认购买</view>
+    </view>
+    </view>
+   </view>
+</view>
+

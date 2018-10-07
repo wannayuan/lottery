@@ -1,0 +1,69 @@
+/* pages/tixian/tixian.wxss */
+.Top{
+margin-top:20rpx;
+border-top:2rpx solid #eee;
+border-bottom:2rpx solid #eee;
+padding-left:30rpx;
+line-height:60rpx;
+font-size:30rpx;
+margin-bottom:20rpx;
+}
+.tixian{
+border-top:1px solid #eee;
+height:60rpx;
+padding-left:30rpx;
+font-size:28rpx;
+border-bottom:2rpx solid #eee;
+}
+.tixianButton{
+height:70rpx;
+margin-left:20rpx;
+margin-right:20rpx;
+width:710rpx;
+line-height:70rpx;
+text-align:center;
+background-color:#cc3333;
+color:#fff;
+border-radius:10rpx;
+margin-top:40rpx;
+}
+.toast_mask{
+opacity:1;  
+width: 100%;  
+height: 100%;  
+overflow: hidden;  
+position: fixed;  
+top: 0;  
+left: 0;  
+z-index: 888;  
+}
+.tixianWarning{
+width:500rpx;
+position:fixed;
+transform:translateX(-50%) translateY(-50%);
+left:50%;
+background-color:#fff;
+padding-left:40rpx;
+top:25%;
+font-size:28rpx;
+border:2rpx solid #ddd;
+padding-bottom:30rpx;
+border-radius:10rpx;
+}
+.tip{
+height:50rpx;
+line-height:70rpx;
+font-size:30rpx;
+margin-top:20rpx;
+}
+.tixianText{
+line-height:70rpx;
+}
+.sure{
+float:right;
+margin-right:20rpx;
+width:100rpx;
+line-height:50rpx;
+color:#cc3333;
+text-align:center;
+}

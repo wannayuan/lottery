@@ -1,0 +1,18 @@
+<!--pages/createShop/createShop.wxml-->
+<view class='shopContainer'>
+  <label class='shopLabel'>真实姓名:</label>
+  <input type='text' placeholder='请输入姓名' class='shopInput' bindblur='inputname'></input>
+  <label class='shopLabel'>联系电话:</label>
+  <input type='number' placeholder='请输入联系电话' class='shopInput' bindblur='inputphone'></input>
+  <label class='shopLabel'>联系地址:</label>
+  <input type='text' placeholder='请输入联系地址' class='shopInput' bindblur='inputaddress'></input>
+  <label class='shopLabel'>身份证号码:</label>
+  <input type='number' placeholder='请输入身份证号' class='shopInput' type="number" bindblur='inputIDcard'></input>
+  <view class='confirm' bindtap='confirm'>提交</view>
+  <view class="toast_box" wx:if="{{toastText!=''}}">  
+  <view class="toast_content">  
+      {{toastText}}  
+    </view>   
+</view>
+</view>
+

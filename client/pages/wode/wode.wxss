@@ -1,0 +1,239 @@
+/* pages/wode/wode.wxss */
+
+.mineContainer image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.header{
+  background-color:#cc3333;
+  padding-bottom: 5rpx;
+}
+.header-top{
+width:100%;
+height:80rpx;
+/* border-bottom:1px solid #d8d8d8; */
+padding-top:14rpx;
+font-size:30rpx;
+margin-top:5rpx;
+color:#fff;
+}
+.header-left{
+float:left;
+padding-left:10px;
+height:50rpx;
+line-height:50rpx;
+}
+.headerImage image{
+ width: 80rpx;
+ height: 80rpx;
+ border-radius: 40rpx;
+}
+.header-right{
+ float:right;
+font-size:26rpx;
+}
+
+.right-avatar{
+width:60rpx;
+margin-right:20rpx;
+float:left;
+text-align:center;
+}
+.account{
+/* height:100rpx; */
+text-align:center;
+padding-top:10rpx;
+}
+.accountBox{
+width:350rpx;
+margin:0 auto;
+height:100%;
+border-bottom:none;
+color:#fff;
+font-size: 28rpx;
+}
+.accountText{
+display:block;
+font-size:26rpx;
+color:#e5e5e5;
+}
+.accountMoney{
+  color: #fff;
+}
+.moneyBox{
+height:50rpx;
+font-size:26rpx;
+padding-top:10rpx;
+margin:10px;
+border:2rpx solid #fff;
+border-radius:7rpx;
+}
+.dongjieMoney{
+  float: left;
+}
+.keyongMoney{
+  float:right;
+}
+.dongjieMoney,.keyongMoney{
+height:50rpx;
+line-height:50rpx;
+width:50%;
+text-align:center;
+color: #fff;
+}
+.buttons{
+height:60rpx;
+padding:15rpx 0 15rpx 20rpx;
+border-bottom:2rpx solid #d8d8d8
+}
+.button{
+display:inline-block;
+width:340rpx;
+background-color:red;
+height:60rpx;
+border-radius:10rpx;
+text-align:center;
+color:#fff;
+font-size:28rpx;
+vertical-align:middle;
+line-height:60rpx;
+margin-right:20rpx;
+}
+.button image{
+  vertical-align:middle;
+  margin-right:10rpx;
+}
+.orders{
+height:120rpx;
+padding:20rpx 0 20rpx 0;
+margin-top:20rpx;
+border-top:1px solid #d8d8d8;
+border-bottom:2rpx solid #d8d8d8;
+font-size:28rpx;
+text-align:center;
+
+}
+.order{
+width:184rpx;
+height:120rpx;
+display:inline-block;
+border-right:2rpx solid #d8d8d8;
+}
+.orderImage{
+width:100rpx;
+height:80rpx;
+margin:0 auto;
+text-align:center;
+}
+.orderImage image{
+  width: 60rpx;
+  height: 50rpx;
+}
+.listImage{
+width:40rpx;
+float:left;
+margin-right:10rpx;
+
+}
+.orderText{
+
+}
+.lists{
+margin-top:20rpx;
+border:2rpx solid #d8d8d8;
+padding-left:20rpx;
+font-size:28rpx;
+}
+.list{
+height:40rpx;
+padding:20rpx;
+padding-left:0;
+border-bottom:2rpx solid #d8d8d8;
+}
+.list:last-child{
+  border-bottom: none;
+}
+.arrow{
+  float:right;
+}
+.toast_mask,.ruzhu_mak{  
+  opacity: 0;  
+  width: 100%;  
+  height: 100%;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 888;  
+}
+.ruzhu_mak{
+  opacity:1;
+}
+.toast_box {  
+width:200rpx;
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:50%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+
+}  
+.toast_content {  
+  padding:6rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+
+}  
+.chongzhi{
+  background-color: #3399cc;
+}
+.tikuan{
+  background-color: #ff9933;
+}
+.ruzhuContainer{
+position:fixed;
+top:50%;
+left:50%;
+transform:translateX(-50%) translateY(-50%);
+width:600rpx;
+border-radius:10rpx;
+background-color:#fff;
+z-index:1000!important;
+font-size:28rpx;
+padding-bottom:30rpx;
+border:2rpx solid #eee;
+}
+.ruzhuTitle{
+height:70rpx;
+border-bottom:2rpx solid #eee;
+text-align:center;
+line-height:70rpx;
+font-size:30rpx;
+background-color:#cc3333;
+color:#fff;
+}
+.ruzhuMessage{
+padding-left:20px;
+line-height:60rpx;
+}
+.contact{
+font-size:30rpx;
+font-weight:bolder;
+}
+.realize,.nexttime{
+float:right;
+margin-right:20px;
+line-height:50rpx;
+color:#cc3333;
+text-align:center;
+cursor:pointer;
+border-bottom:2rpx dotted #dadada;
+}
+.nexttime{
+  color:#000;
+}

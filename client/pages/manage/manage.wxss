@@ -1,0 +1,38 @@
+.prizeState{
+height:50rpx;
+border:2rpx solid #ddd;
+padding:25rpx 0rpx 25rpx 26rpx;
+}
+.choose{
+display:inline-block;
+width:136rpx;
+background-color:#999999;
+height:50rpx;
+border-radius:15rpx;
+color:#fff;
+text-align:center;
+margin-right: 42rpx;
+}
+.checked{
+  background-color: #cc3333;
+}
+.gray{
+  background-color: #999999;
+}
+.inforBox{
+  padding-left:0 20rpx;
+}
+.manageInfor{
+float:left;
+width:49%;
+line-height:60rpx;
+padding-left:1%;
+border-bottom:2rpx solid #dadada;
+}
+.title{
+height:60rpx;
+line-height:60rpx;
+padding-left:30rpx;
+color:#cc3333;
+background-color:#999999;
+}

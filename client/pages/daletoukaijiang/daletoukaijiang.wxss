@@ -1,0 +1,119 @@
+/* pages/daletoukaijiang/daletoukaijiang.wxss */
+.ball{
+float:left;
+width:70rpx;
+height:70rpx;
+text-align:center;
+line-height:64rpx;
+font-size:32rpx;
+position:relative;
+color:#fff;
+}
+.ball-radius{
+width:60rpx;
+height:60rpx;
+position:absolute;
+top:6rpx;
+left:6rpx;
+line-height:60rpx;
+border-radius:30rpx;
+border:2rpx solid #ddd;
+font-weight: bolder;
+}
+.selected1{
+  background-color:#cc3333;
+  color:#fff;
+}
+.selected2{
+  background-color:#3399ff;
+  color:#fff;
+}
+.ballNumber{
+  height: 140rpx;
+}
+.bottomBtn{
+height:80rpx;
+border:2rpx solid #ddd;
+padding:15rpx 25rpx;
+width:684rpx;
+}
+.btn{
+background-color:#cc3333;
+height:80rpx;
+color:#fff;
+text-align:center;
+line-height:80rpx;
+border-radius:10rpx;
+width: 684rpx;
+}
+.kaijiang{
+overflow:hidden;
+}
+.Qihao{
+display:block;
+font-size:31rpx;
+margin-bottom:5rpx;
+}
+.kaijiangTime{
+font-size:25rpx;
+display:block;
+}
+.information{
+  margin-bottom:15rpx;
+}
+.header{
+height:300rpx;
+border-bottom:2rpx solid red;
+padding:25rpx;
+}
+.header-top{
+height:190rpx;
+border-bottom:2rpx solid #ddd;
+}
+.header-bottom{
+height:84rpx;
+padding:12rpx 0;
+
+}
+.bottomBox{
+float:left;
+width:280rpx;
+padding-left:20rpx;
+}
+image{
+width: 40rpx;
+height: 40rpx;
+}
+.tittle{
+font-size:26rpx;
+}
+.content{
+  font-size: 30rpx;
+  color: red;
+}
+.sepatator{
+display:inline-block;
+height:84rpx;
+line-height:84rpx;
+float:left;
+}
+.prizeTable{
+background-color:#eee;
+border:2rpx solid #d8d8d8;
+margin:20rpx;
+border-bottom:none;
+font-size: 28rpx;
+}
+.prizeTr{
+height:80rpx;
+line-height:80rpx;
+border-bottom:2rpx solid #d8d8d8;
+}
+.prizeClass,.prizeZhushu,.prizeMoney{
+width:200rpx;
+display:inline-block;
+text-align:center;
+}
+.prizeMoney{
+  color: red;
+}

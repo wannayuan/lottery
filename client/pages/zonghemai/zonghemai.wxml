@@ -1,0 +1,29 @@
+ <view class='prizeState' wx:if="{{hemai=='false'}}">
+<view  class='noOrder'>
+ <text>暂无合买订单!</text>
+</view>
+</view> 
+<view class='hemaiOrder' wx:else>
+   <block wx:for="{{hemai}}">
+   <view class='order' wx:if="{{item.hemai!=false}}">
+    <view class='orderTop'>
+     <text>{{item.lotterytype}}</text><text>期号:{{item.issue}}</text><text>发起人:{{item.username}}</text>
+    </view>
+     <view class='orderBottom' data-data="{{item.lotterytype}}" bindtap='xiangqing'>
+    <view class='bottomLeft'>
+    <text>号码:{{item.betnumber}}</text>
+    <text>完成率:{{item.percent}}%</text>
+    </view>
+    <view class='bottomRight'>
+    <image src='../../images/selectOrder.jpg'></image>
+    </view>
+    </view>
+   </view>
+    <view  class='order'  wx:else>
+      <view class='orderTop'>
+     <text>{{item.lotterytype}}</text>
+     <text>暂无相应的合买订单</text>
+    </view>
+   </view>
+   </block>
+</view>

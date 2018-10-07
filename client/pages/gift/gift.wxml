@@ -1,0 +1,14 @@
+<view class='prizeState'>
+   <view class="choose wx:if={{prizeState==1?'checked':''}}" data-prizeState="1" bindtap='changeState'>全部用户</view>
+   <view class="choose wx:if={{prizeState==2?'checked':''}}" data-prizeState="2" bindtap='changeState'>彩票站</view>
+   <view class="choose wx:if={{prizeState==3?'checked':''}}" data-prizeState="3" bindtap='changeState'>发起人</view>
+   <view class="choose wx:if={{prizeState==4?'checked':''}}" data-prizeState="4" bindtap='changeState'>中奖金额</view>
+</view>
+  <view>
+    <block wx:for="{{jsonArray}}">
+    <view class='zhongContainer'>
+     <view  class='zhongChild'><text wx:if="{{prizeState!=2}}">****</text>{{item.name}}</view>
+     <view  class='zhongChild'><text wx:if="{{prizeState!=4}}" class  ="childText">中奖率:{{item.percent}}</text><text wx:else class  ="childText">中奖总金额:{{item.percent}}元</text></view>
+    </view>
+    </block>
+  </view>  

@@ -1,0 +1,22 @@
+<!--pages/Manageshenqing/Manageshenqing.wxml-->
+<view class='hemaiOrder' wx:if="{{shop}}">
+   <block wx:for="{{shop}}">
+   <view class='order'>
+    <view class='orderTop gray'>
+     <text>姓名:{{item.realname}}</text><text bindtap='createShop' data-data="{{item.openid}}" class='kaijiang' >创建店铺</text>
+    </view>
+    <!-- <block wx:if="{{item.select}}"> -->
+     <view class='orderBottom'>
+    <view class='bottomLeft'>
+     <text>电话号码:{{item.telphone}}</text>
+     <text>身份证号:{{item.IDcard}}</text>
+     <text>地址:{{item.address}}</text>
+    </view>
+    </view>
+     <!-- </block> -->
+   </view>
+   </block>
+</view>
+<view wx:if="{{tip}}" class="tip">
+  暂无店家入驻申请!
+</view>

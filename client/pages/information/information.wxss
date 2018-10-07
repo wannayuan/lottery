@@ -1,0 +1,92 @@
+/* information.wxss */
+.bottom{
+height:100rpx;
+padding-top:40rpx;
+border-top:2rpx solid #d8d8d8;
+padding:40rpx 20rpx 20rpx 20rpx;
+width:710rpx;
+background-color:#fff;
+text-align: center;
+}
+.submit{
+ background-color:#cc3333;
+ color: #fff;
+}
+.information_Box{
+  margin-top:20rpx;
+  border-top:2rpx solid #d8d8d8;
+}
+.information{
+height:100rpx;
+border-bottom:2rpx solid #d8d8d8;
+line-height:100rpx;
+}
+.note{
+font-size:30rpx;
+width:150rpx;
+display:inline-block;
+text-align:center;
+}
+.value{
+display:inline-block;
+height:80rpx;
+width:200px;
+line-height:100rpx;
+font-size:26rpx;
+overflow:inherit;
+padding-left:20rpx;
+}
+.tips{
+font-size:28rpx;
+line-height:50rpx;
+padding:80rpx 40rpx 200rpx 20rpx;
+height:440rpx;
+}
+.warningText{
+  display: block;
+  color: red;
+  font-size: 26rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top:10rpx;
+}
+.toast_mask {  
+  opacity: 0;  
+  width: 100%;  
+  height: 100%;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 888;  
+}
+.toast_box {  
+width:200rpx;
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:50%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+}  
+.toast_content {  
+  padding:6rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+}  
+#phoneNumber{
+  position: relative;
+}
+#phoneNumber button{
+display:inline-block;
+position:absolute;
+width:200rpx;
+font-size:24rpx;
+right:10rpx;
+background-color:#ddd;
+top:20rpx;
+}

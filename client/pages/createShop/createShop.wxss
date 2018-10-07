@@ -1,0 +1,86 @@
+/* pages/createShop/createShop.wxss */
+.shopContainer{
+  font-size:28rpx;
+}
+.shopLabel{
+width:150rpx;
+margin-left:20rpx;
+margin-right:10rpx;
+line-height:50rpx;
+display:inline-block;
+}
+.shopInput{
+display:inline-block;
+width:540rpx;
+height:50rpx;
+margin-top:20rpx;
+border:2rpx solid #ddd;
+border-radius:10rpx;
+padding-left:20rpx;
+overflow:inherit;
+}
+.shopImage{
+margin-top:30rpx;
+display:block;
+}
+.loadPicture{
+margin-top:20rpx;
+width:150rpx;
+height:150rpx;
+border:2rpx solid #ddd;
+margin-left:20rpx;
+position:relative;
+display:inline-block;
+}
+.loadPicture image{
+width:100%;
+height:100%;
+}
+.rowPicture{
+width:80%;
+height:4rpx;
+margin-left:10%;
+position:absolute;
+top:50%;
+background-color:#ddd;
+border-radius:4rpx;
+}
+.colPicture{
+width:4rpx;
+height:80%;
+margin-top:10%;
+left:50%;
+position:absolute;
+background-color:#ddd;
+border-radius:4rpx; 
+}
+.confirm{
+  width:710rpx;
+  margin-left:20rpx;
+  height:70rpx;
+  background-color:#cc3333;
+  border-radius:10rpx;
+  color:#fff;
+  text-align:center;
+  line-height:70rpx;
+  font-size:30rpx;
+  margin-top:30rpx;
+}
+.toast_box {  
+font-size:24rpx;
+position:fixed;
+left:50%;
+top:25%;
+background-color:gray;
+border-radius:10rpx;
+color:#fff;
+padding:10rpx;
+transform:translateX(-50%) translateY(-50%);
+}  
+.toast_content {  
+  padding:10rpx; 
+  border-radius:10rpx;
+  background-color:#000;
+  text-align: center;
+  line-height:40rpx;
+}  

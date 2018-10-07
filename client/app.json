@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/caipiao/caipiao",
+    "pages/goHemai/goHemai",
+    "pages/zonghemai/zonghemai",
+    "pages/myhemai/myhemai",
+    "pages/myorder/myorder",
+    "pages/wode/wode",
+    "pages/shuangseqiu/shuangseqiu",
+    "pages/touzhu/touzhu",
+    "pages/information/information",
+    "pages/kaijiang/kaijiang",
+    "pages/shuangseqiukaijiang/shuangseqiukaijiang",
+    "pages/shuangHistory/shuangHistory",
+    "pages/register/register",
+    "pages/daletou/daletou",
+    "pages/jingcaizuqiu/jingcaizuqiu",
+    "pages/daletouHistory/daletouHistory",
+    "pages/daletoukaijiang/daletoukaijiang",
+    "pages/qixingcaiHistory/qixingcaiHistory",
+    "pages/qixingcaiKaijiang/qixingcaiKaijiang",
+    "pages/qixingcai/qixingcai",
+    "pages/chongzhi/chongzhi",
+    "pages/shuangXiangqing/shuangXiangqing",
+    "pages/daletouXiang/daletouXiang",
+    "pages/qixingXiang/qixingXiang",
+    "pages/duijiang/duijiang",
+    "pages/zhifu/zhifu",
+    "pages/gift/gift",
+    "pages/fucai3D/fucai3D",
+    "pages/chongzhiMoney/chongzhiMoney",
+    "pages/createShop/createShop",
+    "pages/tixian/tixian",
+    "pages/zhuijia/zhuijia",
+    "pages/tixianRecord/tixianRecord",
+    "pages/moneyDetail/moneyDetail",
+    "pages/manage/manage",
+    "pages/realize/realize",
+    "pages/Managedianpu/Managedianpu",
+    "pages/Manageshenqing/Manageshenqing",
+    "pages/chupiao/chupiao",
+    "pages/qiangdan/qiangdan",
+    "pages/signup/signup",
+    "pages/forgetpass/forgetpass"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cc3333",
+    "navigationBarTitleText": "精彩",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eee"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#cc3333",
+    "borderStyle": "white",
+    "backgroundColor": "#333333",
+    "list": [
+      {
+        "selectedIconPath": "images/index.png",
+        "iconPath": "images/index1.jpg",
+        "pagePath": "pages/caipiao/caipiao",
+        "text": "应用首页"
+      },
+      {
+        "selectedIconPath": "images/kaijiang1.png",
+        "iconPath": "images/kaijiang.png",
+        "pagePath": "pages/kaijiang/kaijiang",
+        "text": "历史开奖"
+      },
+      {
+        "selectedIconPath": "images/hemai1.png",
+        "iconPath": "images/hemai.png",
+        "pagePath": "pages/zonghemai/zonghemai",
+        "text": "参与合买"
+      },
+      {
+        "selectedIconPath": "images/wode1.png",
+        "iconPath": "images/wode.png",
+        "pagePath": "pages/wode/wode",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

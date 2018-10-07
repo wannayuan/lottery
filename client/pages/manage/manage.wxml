@@ -1,0 +1,83 @@
+<view class='prizeState'>
+ <view class="choose wx:if={{prizeState==1?'checked':''}}" data-prizeState="1" bindtap='changeState'>全部</view>
+ <view class="choose wx:if={{prizeState==2?'checked':''}}"data-prizeState="2" bindtap='changeState'>双色球</view>
+ <view class="choose wx:if={{prizeState==3?'checked':''}}" data-prizeState="3" bindtap='changeState'>大乐透</view>
+ <view class="choose wx:if={{prizeState==4?'checked':''}}" data-prizeState="4" bindtap='changeState'>七星彩</view>
+</view>
+<view wx:if="{{prizeState==1||prizeState==2}}" wx:for="{{shuangArray}}" class="inforBox wx:if={{index%2==1?'checked':''}}" >
+  <view wx:if="{{prizeState==1||prizeState==2}}" class='title'>双色球</view>
+ <view style="height:62rpx">
+     <view class='manageInfor'>总销售金额:{{item.totalMo}}</view>
+     <view class='manageInfor'>总购买注数:{{item.totalZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>合买金额:{{item.hemaiMo}}</view>
+     <view class='manageInfor'>合买注数:{{item.hemaiZhu}}</view>
+  </view>
+  <view style="height:62rpx">
+    <view class='manageInfor'>三等奖中奖金额:{{item.sanMo}}</view>
+    <view class='manageInfor'>三等奖中奖注数:{{item.sanZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+    <view class='manageInfor'>四等奖中奖金额:{{item.siMo}}</view>
+     <view class='manageInfor'>四等奖中奖注数:{{item.siZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>五等奖中奖金额:{{item.wuMo}}</view>
+     <view class='manageInfor'>五等奖中奖注数:{{item.wuZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>六等奖中奖金额:{{item.liuMon}}</view>
+     <view class='manageInfor'>六等奖中奖注数:{{item.liuZhu}}</view>
+  </view>
+</view>
+<view wx:if="{{prizeState==1||prizeState==3}}" wx:for="{{daletouArray}}" class="inforBox wx:if={{index%2==1?'checked':''}}" >
+  <view wx:if="{{prizeState==1||prizeState==3}}" class='title'>大乐透</view>
+ <view style="height:62rpx">
+     <view class='manageInfor'>总销售金额:{{item.totalMo}}</view>
+     <view class='manageInfor'>总购买注数:{{item.totalZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>合买金额:{{item.hemaiMo}}</view>
+     <view class='manageInfor'>合买注数:{{item.hemaiZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+    <view class='manageInfor'>四等奖中奖金额:{{item.siMo}}</view>
+     <view class='manageInfor'>四等奖中奖注数:{{item.siZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>五等奖中奖金额:{{item.wuMo}}</view>
+     <view class='manageInfor'>五等奖中奖注数:{{item.wuZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>六等奖中奖金额:{{item.liuMo}}</view>
+     <view class='manageInfor'>六等奖中奖注数:{{item.liuZhu}}</view>
+  </view>
+</view>
+<view wx:if="{{prizeState==1||prizeState==4}}" wx:for="{{qixingcaiArray}}" class="inforBox wx:if={{index%2==1?'checked':''}}" >
+  <view wx:if="{{prizeState==1||prizeState==4}}"class='title'>七星彩</view>
+ <view style="height:62rpx">
+     <view class='manageInfor'>总销售金额:{{item.totalMo}}</view>
+     <view class='manageInfor'>总购买注数:{{item.totalZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>合买金额:{{item.hemaiMo}}</view>
+     <view class='manageInfor'>合买注数:{{item.hemaiZhu}}</view>
+  </view>
+  <view style="height:62rpx">
+    <view class='manageInfor'>三等奖中奖金额:{{item.sanMo}}</view>
+    <view class='manageInfor'>三等奖中奖注数:{{item.sanZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+    <view class='manageInfor'>四等奖中奖金额:{{item.siMo}}</view>
+     <view class='manageInfor'>四等奖中奖注数:{{item.siZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>五等奖中奖金额:{{item.wuMo}}</view>
+     <view class='manageInfor'>五等奖中奖注数:{{item.wuZhu}}</view>
+  </view>
+   <view style="height:62rpx">
+     <view class='manageInfor'>六等奖中奖金额:{{item.liuMo}}</view>
+     <view class='manageInfor'>六等奖中奖注数:{{item.liuZhu}}</view>
+  </view>
+</view>
